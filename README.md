@@ -1,4 +1,4 @@
-# DRP-MTGSA
+# DeepExpDR
 DeepExpDR: rug Response Prediction through Molecular Topological Grouping and Substructure-aware Expert
 
 
