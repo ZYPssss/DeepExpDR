@@ -1,5 +1,5 @@
 # DRP-MTGSA
-DRP-MTGSA: Drug Response Prediction based on Molecular Topological Grouping and Substructure-Aware
+DeepExpDR: rug Response Prediction through Molecular Topological Grouping and Substructure-aware Expert
 
 
 ## Data
