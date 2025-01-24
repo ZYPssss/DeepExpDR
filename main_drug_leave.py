@@ -26,9 +26,11 @@ from Dataload.MyData import  MyDataset, _collate, getDataload
 from model.utils import buildPrjSmiles, graph_batch_from_smile
 from model.Mol_TopExpert_Mulit_DRP import Mol_TopExpert_Mulit_DRP
 from model.Mol_substruct_Topexpert import CLassfiy_gate
+from MF import svt_solve
 from agrs.args import args, args1
 import codecs
 from subword_nmt.apply_bpe import BPE
+from model.Prepare_model import prepare_model
 from model.Mol_substruct1 import Mol_substruct1
 # Defining whether to use scRNA-seq data or not and, if using, the number of single cells per cell line that will be used
 use_sc = False
@@ -49,8 +51,8 @@ valdrug_index = np.loadtxt('./data/bulk/valdrug_index.csv', delimiter=',', dtype
 # IC50_Matrix = np.loadtxt('./data/CDR_Matrix/IC50_Matrix.csv', delimiter=',', dtype=float)
 # CDR_mask = 1-np.float32(IC50_Matrix == 0)
 # cline_glofeat, drug_glofeat = svt_solve(A = IC50_Matrix, mask = CDR_mask)
-cline_glofeat = np.load('./data/bulk/cline_glofeat.npy')
-drug_glofeat = np.load('./data/bulk/drug_glofeat.npy')
+cline_glofeat = np.load('./data/CDR_Matrix/cline_glofeat_drug_cold.npy')
+drug_glofeat = np.load('./data/CDR_Matrix/drug_glofeat_drug_cold.npy')
 drug_glofeat = torch.tensor(drug_glofeat.copy()).to(device).float()
 cline_glofeat = torch.tensor(cline_glofeat.copy()).to(device).float()
 

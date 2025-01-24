@@ -22,6 +22,7 @@ from agrs.args import args, args1
 from model.Mol_substruct_Topexpert import CLassfiy_gate
 import codecs
 from subword_nmt.apply_bpe import BPE
+from model.Prepare_model import prepare_model
 from model.Mol_substruct1 import Mol_substruct1
 # Defining whether to use scRNA-seq data or not and, if using, the number of single cells per cell line that will be used
 use_sc = False
@@ -52,8 +53,8 @@ if use_sc == True:
     input_features_size['sc0'] = featuring_train[7].shape[1]
 
 
-cline_glofeat = np.load('./data/bulk/cline_glofeat.npy')
-drug_glofeat = np.load('./data/bulk/drug_glofeat.npy')
+cline_glofeat = np.load('./data/CDR_Matrix/cline_glofeat_cell_cold.npy')
+drug_glofeat = np.load('./data/CDR_Matrix/drug_glofeat_cell_cold.npy')
 drug_glofeat = torch.tensor(drug_glofeat.copy()).to(device).float()
 cline_glofeat = torch.tensor(cline_glofeat.copy()).to(device).float()
 

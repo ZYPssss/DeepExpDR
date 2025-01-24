@@ -26,6 +26,7 @@ from model.Mol_substruct_Topexpert_classify import CLassfiy_gate
 from agrs.args import args, args1
 import codecs
 from subword_nmt.apply_bpe import BPE
+from model.Prepare_model import prepare_model
 from model.Mol_substruct1 import Mol_substruct1
 # Defining whether to use scRNA-seq data or not and, if using, the number of single cells per cell line that will be used
 use_sc = False

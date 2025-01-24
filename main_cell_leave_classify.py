@@ -43,8 +43,8 @@ train_test_index = np.loadtxt('./data/Binary_class/train_test_index.csv', delimi
 valcell_index = np.loadtxt('./data/Binary_class/valcell_index.csv', delimiter=',', dtype=int)
 valdrug_index = np.loadtxt('./data/Binary_class/valdrug_index.csv', delimiter=',', dtype=int)
 
-cline_glofeat = np.load('./data/Binary_class/cline_glofeat.npy')
-drug_glofeat = np.load('./data/Binary_class/drug_glofeat.npy')
+cline_glofeat = np.load('./data/Binary_class/cline_glofeat_cell_cold.npy')
+drug_glofeat = np.load('./data/Binary_class/drug_glofeat_cell_cold.npy')
 drug_glofeat = torch.tensor(drug_glofeat.copy()).to(device).float()
 cline_glofeat = torch.tensor(cline_glofeat.copy()).to(device).float()
 # Defining input shapes for implementation in the model
